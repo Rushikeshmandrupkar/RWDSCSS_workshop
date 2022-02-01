@@ -1,0 +1,89 @@
+@import "nav";
+@import "img";
+
+$backcolor:#E8E8E8;
+$fontcolor:black;
+
+@mixin bckcolor{
+background-color: $backcolor;
+}
+
+.header{
+@include bckcolor;
+padding: 15px;
+text-align: center;
+color: $fontcolor;
+font-size: 30px;
+}
+
+.grid-container
+{
+background-color: white;
+display: grid;
+grid-template-columns: auto auto  ;
+padding: 2em;
+grid-gap: 50px 50px;
+
+
+}
+
+.grid-row{
+    grid-row-start:span 3;
+}
+
+.grid-container >div{
+    background-color: #BEBEBE;
+    text-align: left;
+    padding: 2vw 0;
+    font-size: 2vw;
+    
+}
+.coe{
+    background-image: $img_1;
+    background-size: cover;
+    -webkit-backdrop-filter: blur(8px);
+    
+
+}
+
+.Insights
+{
+    background-image: $img_2;
+    background-size: cover;
+    -webkit-backdrop-filter: blur(8px);
+    
+}
+
+.services
+{
+    background-image: $img_3;
+    background-size: cover;
+
+}
+
+.overview
+{
+background-image: $img_4;
+    background-size: cover;
+}
+
+.footer
+{
+    @include bckcolor;
+    text-align: center;
+    color: $fontcolor;
+    padding: 15px;
+}
+
+@media  (max-width:768px)
+{
+    .grid-container{
+        display: block;
+        
+    }
+
+    
+}
+
+
+
